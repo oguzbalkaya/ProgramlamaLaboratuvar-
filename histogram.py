@@ -1,4 +1,4 @@
-#Listede bulunan elemanların kaçar tane olduğunu bulan fonksiyon.
+#Listede bulunan elemanların kaçar tane olduğunu bulan fonksiyon
 def my_h(list_1):
     dict_1=dict()
     for i in list_1:
