@@ -10,7 +10,6 @@ def shellSort(arr):
                 j=j-gap
             arr[j] = temp
         gap//=2
-
 dizi = [23,10,12,6,5,18,1]
 shellSort(dizi)
 print(dizi)
