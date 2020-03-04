@@ -1,8 +1,8 @@
 def insertionSort(arr):
     n = len(arr)
-    for i in range(1,n): #Dizinin 0. elemanı başlangıçta sorted kısma denk geldiği için 1 den başladık.
+    for i in range(1,n):
         key = arr[i]
-        j = i-1 #Sıralı kısmın son elemanı
+        j = i-1 
         while j>=0 and key < arr[j]:
             arr[j+1] = arr[j]
             j -= 1
