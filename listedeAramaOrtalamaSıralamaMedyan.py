@@ -30,7 +30,6 @@ def binarySearch(liste,aranan):
         else:
             altSinir=orta+1
     return 0
-
 def medyan(liste):
     if len(liste)%2==1:
         orta = int(len(liste)/2)+1
@@ -40,7 +39,6 @@ def medyan(liste):
         orta1,orta2=liste[int(len(liste)/2)],liste[int(len(liste)/2)-1]
         print(orta1,orta2)
         return (orta1+orta2)/2
-
 liste = [7,6,4,5,1,2,3,8]
 print(bubbleSort(liste))
 print(binarySearch(liste,8))
