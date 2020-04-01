@@ -15,8 +15,6 @@ def modBul_sozluk(histogram):
         if histogram[eleman] > mod:
             mod,modkey=histogram[eleman],eleman
     return modkey
-
-
 print(histogram_sozluk)
 print(histogram_liste)
 print(modBul_sozluk(histogram_sozluk))
