@@ -5,4 +5,3 @@ def listeOlustur(n=10,min=1,max=100):
     for i in range(n):
         liste.append(rand(min,max))
     return liste
-#print(listeOlustur())
