@@ -34,6 +34,7 @@ def medyanBul(dizi):
 def dosyaYaz(dosyaYolu):
     yazilacakDosya = open(dosyaYolu+"/170401045_hw_2_output.txt","w+",encoding="UTF-8",errors="ignore")
     yazilacakDosya.write("Medyan : {}\nOrtalama : {}".format(medyanBul(cikisAylari),ortalamaBul(cikisAylari)))
+    yazilacakDosya.close()
 with open(sys.argv[1]+"/input_hw_2.csv") as dosya:
     histogram = histogramOlustur(dosya)
     cikisAylari,histogram = histogram[1],histogram[0]
