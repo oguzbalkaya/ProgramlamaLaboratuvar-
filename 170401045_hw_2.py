@@ -1,16 +1,15 @@
 import sys
 def histogramOlustur(dosya):
-    histogram,veriler = [],[]
+    histogram = []
     for i in dosya:
         kontrol = False
-        veriler.append(int(i.split(";")[3].split("-")[1]))
         for k in range(len(histogram)):
             if int(i.split(";")[3].split("-")[1]) == histogram[k][0]:
                 histogram[k][1] += 1
                 kontrol = True
         if kontrol == False:
             histogram.append([int(i.split(";")[3].split("-")[1]), 1])
-    return histogram,veriler
+    return histogram
 def ortalamaBul(dizi):
     toplam=0
     for i in dizi:
@@ -31,12 +30,12 @@ def medyanBul(dizi):
     else:
         orta1,orta2=dizi[int(len(dizi)/2)],dizi[int(len(dizi)/2)-1]
         return (orta1+orta2)/2
-def dosyaYaz(dosyaYolu):
+def dosyaYaz(dosyaYolu,liste):
     yazilacakDosya = open(dosyaYolu+"170401045_hw_2_output.txt","w+",encoding="UTF-8",errors="ignore")
-    yazilacakDosya.write("Medyan : {}\nOrtalama : {}".format(medyanBul(cikisAylari),ortalamaBul(cikisAylari)))
+    yazilacakDosya.write("Medyan : {}\nOrtalama : {}".format(medyanBul(liste),ortalamaBul(liste)))
     yazilacakDosya.close()
 with open(sys.argv[1]+"input_hw_2.csv") as dosya:
     histogram = histogramOlustur(dosya)
-    cikisAylari,histogram = histogram[1],histogram[0]
-    dosyaYaz(sys.argv[2])
+    liste = [i[1] for i in histogram]
+    dosyaYaz(sys.argv[2],liste)
     print("Histogram : ",histogram)
