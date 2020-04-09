@@ -1,7 +1,6 @@
 import sympy as sym
 import sympy.plotting as syp
 import matplotlib.pyplot as plt
-sym.init_printing()
 sigma,mu,x = sym.Symbol('sigma'),sym.Symbol('mu'),sym.Symbol('x')
 sym.pprint(2*sym.pi*sigma)
 part1 = 1/(sym.sqrt(2*sym.pi*sigma**2))
