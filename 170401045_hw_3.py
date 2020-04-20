@@ -4,6 +4,9 @@ Toplam gerçekleşecek olay sayısı -> n = 40
 Başarılı olarak gerçekleşmesini istediğimiz olay sayısı -> k = 10
 
 Başarılı olma olasılığı p=0.58 olan bir olayın n=40 kez gerçekleştiğinde k=10 kez başarılı olma olasılığının binom dağılım grafiği.
+
+
+Oğuz BALKAYA 170401045
 """
 from sympy import * #sympy kütüphanesi
 import matplotlib.pyplot as plt
